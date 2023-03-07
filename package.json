@@ -1,0 +1,22 @@
+{
+  "name": "front-end-search-engine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bledichef/d-veloppez-un-algorithme.git"
+  },
+  "author": "Guillaume C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bledichef/d-veloppez-un-algorithme/issues"
+  },
+  "homepage": "https://github.com/Bledichef/d-veloppez-un-algorithme#readme",
+  "dependencies": {
+    "eslint": "^8.35.0"
+  }
+}

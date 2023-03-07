@@ -1,0 +1,445 @@
+body {
+  margin: 0% 5%;
+}
+
+label {
+  display: none;
+}
+
+.logo-title {
+  margin: 3% auto;
+}
+
+.logo-title h1 {
+  font-family: 'DM Sans', sans-serif;
+  color: #D04F4F;
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logo-title img {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search {
+  border: none;
+  border-radius: 5px;
+  height: 69px;
+  width: 100%;
+  background: url(../assets/search.svg) no-repeat 98%;
+  background-color: #E7E7E7;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  padding-left: 3%;
+}
+
+.tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2% 0%;
+  width: 100%;
+}
+
+.tag .tag-ingredients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #3282F7;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-right: 2%;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 12%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.tag .tag-ingredients .close-tag {
+  width: 17%;
+  cursor: pointer;
+}
+
+.tag .tag-ustensils {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-right: 2%;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 12%;
+  height: 40px;
+  background-color: #ED6454;
+  font-size: 16px;
+}
+
+.tag .tag-ustensils .close-tag {
+  width: 17%;
+  cursor: pointer;
+}
+
+.tag .tag-device {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #68D9A4;
+  padding-left: 1%;
+  padding-right: 1%;
+  margin-right: 2%;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  width: 12%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.tag .tag-device .close-tag {
+  width: 17%;
+  cursor: pointer;
+}
+
+.filter {
+  margin-top: 1%;
+  margin-bottom: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 45%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter .container-input-ingredients {
+  cursor: pointer;
+  border: none;
+  display: block;
+  background-color: #3282F7;
+  font-family: 'Lato', sans-serif;
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+  margin-right: 5%;
+  z-index: 2;
+}
+
+.filter .container-input-ingredients .container-input-ing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter .container-input-ingredients .container-input-ing input {
+  border: none;
+  width: 120px;
+  background-color: #3282F7;
+  font-size: 18px;
+}
+
+.filter .container-input-ingredients .list-ingredients {
+  background-color: #3282F7;
+  color: white;
+  z-index: 2;
+  width: 580px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-top: 0;
+}
+
+.filter .container-input-ingredients .list-ingredients .element-ingredient {
+  font-family: 'Lato', sans-serif;
+  width: 30%;
+  list-style: none;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.filter .container-input-ustensils {
+  cursor: pointer;
+  display: block;
+  background-color: #ED6454;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+  margin-right: 5%;
+  z-index: 2;
+}
+
+.filter .container-input-ustensils .container-input-ust {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter .container-input-ustensils .container-input-ust input {
+  background-color: #ED6454;
+  border: none;
+  width: 120px;
+  font-size: 18px;
+}
+
+.filter .container-input-ustensils .list-ustensils {
+  background-color: #ED6454;
+  color: white;
+  z-index: 2;
+  width: 580px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 5px;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.filter .container-input-ustensils .list-ustensils .element-ustensil {
+  font-family: 'Lato', sans-serif;
+  width: 30%;
+  list-style: none;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.filter .container-input-devices {
+  cursor: pointer;
+  display: block;
+  background-color: #68D9A4;
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+  margin-right: 5%;
+  z-index: 2;
+}
+
+.filter .container-input-devices .container-input-dev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
+  height: 50px;
+  width: 200px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter .container-input-devices .container-input-dev input {
+  background-color: #68D9A4;
+  border: none;
+  width: 120px;
+  font-size: 18px;
+}
+
+.filter .container-input-devices .list-devices {
+  background-color: #68D9A4;
+  color: white;
+  z-index: 2;
+  width: 580px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 5px;
+  margin-top: 0;
+  border-radius: 5px;
+}
+
+.filter .container-input-devices .list-devices .element-device {
+  font-family: 'Lato', sans-serif;
+  width: 30%;
+  list-style: none;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.filter input::-webkit-input-placeholder {
+  color: white;
+  padding-left: 4%;
+}
+
+.filter input:-ms-input-placeholder {
+  color: white;
+  padding-left: 4%;
+}
+
+.filter input::-ms-input-placeholder {
+  color: white;
+  padding-left: 4%;
+}
+
+.filter input::placeholder {
+  color: white;
+  padding-left: 4%;
+}
+
+.container-article {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Lato', sans-serif;
+}
+
+.container-article .article-recipe {
+  width: 31%;
+  height: 364px;
+  border-radius: 5px;
+  margin-bottom: 5%;
+  background-color: #E7E7E7;
+}
+
+.container-article .article-recipe img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container-article .article-recipe .container-text-title {
+  font-family: 'Lato', sans-serif;
+  width: 95%;
+  height: 40px;
+  margin: 3% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-article .article-recipe .container-text-title h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.container-article .article-recipe .container-text-title .icon-time {
+  font-size: 12px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 15%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 2%;
+}
+
+.container-article .article-recipe .container-ingredient-recipe {
+  width: 95%;
+  margin: 3% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-article .article-recipe .container-ingredient-recipe .ingredient {
+  width: 50%;
+  font-size: 11.5px;
+  height: 85px;
+  line-height: 14px;
+}
+
+.container-article .article-recipe .container-ingredient-recipe .ingredient .container-ingredient {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Lato', sans-serif;
+}
+
+.container-article .article-recipe .container-ingredient-recipe .ingredient .container-ingredient .aliment {
+  font-weight: bold;
+}
+
+.container-article .article-recipe .container-ingredient-recipe .infos-recipe {
+  font-family: 'Roboto', sans-serif;
+  height: 85px;
+  width: 47%;
+  font-size: 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: start;
+  line-height: 14px;
+  margin-right: 2%;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&family=Lato:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/f7adce583f.js" crossorigin="anonymous"></script>
+    <title>Les petits plats</title>
+
+    <link rel="icon" href="assets/Vector.svg">
+</head>
+
+<body>
+    <header role="banner" class="logo-title" tabindex="1">
+        <img src="assets/logo.png" alt="logo les petits plats" aria-label="logo les petits plats">
+        <h1>Les petits plats</h1>
+    </header>
+
+    <label for="search">Tapez les premières lettres d'une recette pour lancer la recherche</label>
+    <input class="search" type="search" id="search" placeholder="Rechercher une recette"
+        aria-label="rechercher une recette">
+
+    <div class="filter-tag">
+        <div class="tag"></div>
+        <div class="filter">
+            <div class="container-input-ingredients">
+                <div class="container-input-ing">
+                    <input type="search" placeholder="Ingrédients" id="ingredients">
+                    <i class="fas fa-chevron-down" id="chevron-ingredient"></i>
+                </div>
+                <ul class="list-ingredients"></ul>
+            </div>
+            <div class="container-input-devices">
+                <div class="container-input-dev">
+                    <input type="search" placeholder="Appareils" id="devices">
+                    <i class="fas fa-chevron-down" id="chevron-device"></i>
+                </div>
+                <ul class="list-devices"></ul>
+            </div>
+            <div class="container-input-ustensils">
+                <div class="container-input-ust">
+                    <input type="search" placeholder="Ustensiles" id="ustensils">
+                    <i class="fas fa-chevron-down" id="chevron-ustensil"></i>
+                </div>
+                <ul class="list-ustensils"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-article">
+    </div>
+    <script src="./src/index.js" type="module"></script>
+
+</body>
+
+</html>
