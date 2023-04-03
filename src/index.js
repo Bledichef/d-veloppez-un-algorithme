@@ -26,8 +26,9 @@ function main() {
     toogleDevices()
     toogleUstensils()
     displayTag()
+    displayRecipesBySearchInput()
     searchInUstensils(arrayUstensils)
-    //searchInDevices(arrayDevices)
+    searchInDevices(arrayDevices)
 }
 
 /**
@@ -228,7 +229,7 @@ function displaySelectDevice(recipes) {
     tagOptionDevice.className = "element-device"
     tagOptionDevice.ariaLabel = `sélectionner l'appareil ${device}`
   }
-  //searchInDevices(arrayDeviceFinish)
+  searchInDevices(arrayDeviceFinish)
 }
 
   /**
@@ -597,6 +598,104 @@ function toogleDevices() {
     }
   })
 }
+ 
+/**
+ * Search function in li, with input search
+ * Call function displayTag() for display tag if user click li
+ * @param {array} arrayDevices - allDevices or devices filtered
+ */
+function searchInDevices(arrayDevices) {
+  const allElementsDevices = document.querySelectorAll(".element-device")
+  arrayDevices = []
+  let newLi = []
+  for (const device of allElementsDevices) {
+    arrayDevices.push(device.innerHTML)
+  }
+
+  inputDevice.addEventListener("input", e => {
+    newLi = arrayDevices.filter(li => li.includes(e.target.value.trim()))
+    ulDevices.innerHTML = ""
   
+    for (const li of newLi) {
+      const tagLi = document.createElement("li")
+      ulDevices.appendChild(tagLi)
+      tagLi.className = "element-device"
+      tagLi.innerHTML = li
+    }
+    displayTag()
+  })
+}
+
+
+
+
+/**
+ * Sort recipes by search bar with FILTER - return filterRecipes (new array with recipes filtered) 
+ * Call again functions displayAllRecipes() / displaySelectDevice() / displaySelectIngredients() / displaySelectUstensils() with params filterRecipes
+ * Add sortByTag
+ */
+function displayRecipesBySearchInput() {
+  const searchBar = document.querySelector(".search")
+  const ulDevices = document.querySelector(".list-devices")
+  const ulUstensils = document.querySelector(".list-ustensils")
+  const ulIngredients = document.querySelector(".list-ingredients")
+
+  let filterRecipes = []
+
+  searchBar.addEventListener("input", e => {
+    const valueInput = e.target.value.toLowerCase().trim() //récupération de la valeur de l'input
+    
+    if (valueInput.length > 2) {
+      containerArticleRecipes.innerHTML = "" 
+          filterRecipes = recipes.filter(recipe => {
+          let filterIngredient = false 
+          for (const item of recipe.ingredients) {
+            const ingredient = item.ingredient.toLowerCase();
+            if (ingredient.includes(valueInput)) {
+              filterIngredient = true
+            }
+          }
+          return recipe.name.toLowerCase().includes(valueInput) ||
+          recipe.description.toLowerCase().includes(valueInput) || filterIngredient
+      })
+      displayAllRecipes(filterRecipes) // appelle à nouveau la fonction pour afficher les recettes avec en paramètre le nouveau tableau trié
+
+      ulIngredients.innerHTML = "" 
+      displaySelectIngredients(filterRecipes) 
+      
+      ulDevices.innerHTML = "" 
+      displaySelectDevice(filterRecipes) 
+
+      ulUstensils.innerHTML = "" 
+      displaySelectUstensils(filterRecipes) 
+      
+      /*
+      recherche sur barre de recherche d'abord puis avec les tags
+      Ecouteur sur les balises ul + au click appel de la fonction tri
+      */
+      const allUls = [ulIngredients, ulDevices, ulUstensils]
+      for(const ul of allUls){
+        ul.addEventListener('click', () => {
+          sortRecipesByTag(filterRecipes)
+          closeTag(filterRecipes)
+        })
+      }
+      displayTag()
+
+      if (filterRecipes.length === 0) {
+        containerArticleRecipes.innerHTML = 'Aucune recette ne correspond à votre critère... vous pouvez chercher "tarte aux pommes", "poisson", etc.'
+      }
+     
+    } else {
+      containerArticleRecipes.innerHTML = ""
+      displayAllRecipes(recipes)
+      console.log("il n'y a pas 3 lettres")
+    }
+  })
+}
+
+
+
+
 
   main()
